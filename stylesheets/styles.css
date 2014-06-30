@@ -1,3 +1,24 @@
 .side-div {
 	width: 300px;
 }
+
+.img-circle {
+	width: 100px;
+	height: 100px;
+}
+
+.resume {
+	width: 300px;
+	height: 600px;
+}
+
+.job-board {
+	width: 200px;
+	height: 200px;
+}
+
+.doctor {
+	width: 200px;
+	height: 200px;
+
+}
