@@ -5,6 +5,8 @@
 .img-circle {
 	width: 100px;
 	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .resume {
@@ -13,12 +15,12 @@
 }
 
 .job-board {
-	width: 200px;
-	height: 200px;
+	width: 350px;
+	height: 250px;
 }
 
 .doctor {
-	width: 200px;
-	height: 200px;
+	width: 350px;
+	height: 250px;
 
 }
