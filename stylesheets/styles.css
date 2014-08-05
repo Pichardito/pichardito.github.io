@@ -1,10 +1,12 @@
+
+
 .side-div {
 	width: 300px;
 }
 
 .img-circle {
-	width: 100px;
-	height: 100px;
+	width: 180px;
+	height: 180px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -15,12 +17,41 @@
 }
 
 .job-board {
-	width: 350px;
+	width: 380px;
 	height: 250px;
 }
 
 .doctor {
-	width: 350px;
+	width: 380px;
 	height: 250px;
 
 }
+
+.modal {
+	max-height: 800px;
+}
+
+.container {
+	height: 900px;
+	background: url("images/ios-linen.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	color:#fff;
+  	background-color:#333;
+	
+}
+
+
+
+
+
+
+
+
+
+/*.section {        width:540px; height:500px;
+                  background:url(images/final_img.png) no-repeat #000; }
+.section .inner { width:540px; height:500px;
+                  background:url(images/code-shot.jpeg) no-repeat; }*/

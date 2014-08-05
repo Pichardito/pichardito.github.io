@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Personal Portfolio</title>
 	<link rel="stylesheet" href="stylesheets/styles.css">
+	<link rel="stylesheet" href="stylesheets/bootstrap-social.css">
 	<link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap-theme.css.map">
 	<link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap-theme.min.css">
@@ -14,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.svg">
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.ttf">
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.woff">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" />
 
 
 	<script src="javascripts/libraries/jquery.js"></script>
@@ -26,6 +28,8 @@
 
 </head>
 <body>
+				
+
 	
 	<div class="container">
 		<div class="media">
@@ -43,6 +47,7 @@
 	<div class="side-div">
 
 			<div class="list-group">
+
 		  	<a href="#" class="list-group-item" data-toggle="modal" data-target=".modal-projects">Projects</a>
 			  <a href="#" class="list-group-item" data-toggle="modal" data-target=".modal-social">Social</a>
 			  <a href="#" class="list-group-item" data-toggle="modal" data-target=".modal-resume">Resume</a>
@@ -52,15 +57,15 @@
 	
 	<div class="modal fade modal-projects" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
+		<div class="modal-dialog modal-lg ">
+			<div class="modal-content bg-info">
 				<img class="job-board" src="images/job-board.png" alt="">
-				<a href="http://wdi-job-board.herokuapp.com/">Click here to go to JobBoard App</a>
+				<a class="btn btn-success" href="http://wdi-job-board.herokuapp.com/">Click here to go to JobBoard App</a>
 				<br>
 				<br>
 
 				<img class="doctor" src="images/physicians.png" alt="">
-				<a href="http://peaceful-coast-3148.herokuapp.com/">Click here to go to Physician Scheduler </a>
+				<a class="btn btn-success" href="http://peaceful-coast-3148.herokuapp.com/">Click here to go to Physician Scheduler </a>
 
 			</div>
 		</div>
@@ -69,14 +74,14 @@
 
 	<div class="modal fade modal-social" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		
-		<div class="modal-dialog modal-lg">
+		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				
-				<a href="http://www.linkedin.com/in/pichardocarlos/">LinkedIn</a>
+				<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/pichardocarlos/"><i class="fa fa-linkedin"></i></a><span>LinkedIn</span>
 				<br>
 				<br>
 
-				<a href="https://twitter.com/CarlosTPichardo">Twitter</a>
+				<a class="btn btn-social-icon btn-github" href="https://github.com/Pichardito"><i class="fa fa-github"><i class="fa fa-github"></i></a><span>Github</span>
 				<br>
 				<br>
 
@@ -87,12 +92,48 @@
 <div class="modal fade modal-resume" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
-			<img class="resume" src="images/ga-resume.pdf" alt="">
+			<div>
+    <iframe src="images/ga-resume.pdf"></iframe>
+    </div>
+			
 
 		</div>
 	</div>
 </div>
 
-	
+	<div class="hello">
+		
+
+	</div>
+
+	<script>
+		(function($){
+    $.fn.parallax = function(options){
+        var $$ = $(this);
+        offset = $$.offset();
+        var defaults = {
+            "start": 0,
+            "stop": offset.top + $$.height(),
+            "coeff": 0.95
+        };
+        var opts = $.extend(defaults, options);
+        return this.each(function(){
+            $(window).bind('scroll', function() {
+                windowTop = $(window).scrollTop();
+                if((windowTop >= opts.start) && (windowTop <= opts.stop)) {
+                    newCoord = windowTop * opts.coeff;
+                    $$.css({
+                        "background-position": "0 "+ newCoord + "px"
+                    });
+                }
+            });
+        });
+    };
+})(jQuery);
+
+// call the plugin
+$('.section').parallax({ "coeff":-0.65 });
+$('.section .inner').parallax({ "coeff":1.15 });
+	</script>
 </body>
 </html>
